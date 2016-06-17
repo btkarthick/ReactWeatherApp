@@ -1,0 +1,12 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "start": "webpack-dev-server --inline"
+  },
+  "keywords": [],
+  "author": "KB",
+  "license": "ISC"
+}

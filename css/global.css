@@ -1,0 +1,16 @@
+/** 
+ * Global css file
+ *   
+**/
+
+.main-wrapper{ width: 100%; }
+
+header{ background-color: #FD6C43; height: 65px; }
+.logo{ padding-top: 15px; }
+.logo a{ text-decoration: none; font-size: 20px; color: #FFFFFF; }
+
+footer{ height: 50px; background-color: #DDDDDD; width: 100%; }
+
+footer main{ text-align: center; padding-top: 18px; font-size: 12px; }
+
+.home-wrapper{width: 100%;}
