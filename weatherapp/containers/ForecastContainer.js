@@ -16,7 +16,7 @@ var ForecastContainer = React.createClass({
         return {
             loading: true,
             selectedCity: this.props.routeParams.city,
-            forecasts : {}
+            forecasts: {}
         }
 
     },
@@ -27,26 +27,27 @@ var ForecastContainer = React.createClass({
 
     },
 
-    componentWillReceiveProps : function ( nextProps ) {
-        
-        this.setState({ selectedCity : nextProps.routeParams.city });
-        this.makeRequest(this.state.selectedCity);
+    componentWillReceiveProps: function (nextProps) {
+
+        this.setState({ selectedCity: nextProps.routeParams.city });
+        this.makeRequest(nextProps.routeParams.city);
     },
 
     makeRequest: function (city) {
+
+        this.setState({ loading: true });
 
         getForecast(city)
 
             .then(function (forecastData) {
 
-                this.setState({ 
-            
-                        loading: false,
-                        forecasts : forecastData 
-                
-            });
-                console.log('ForecastData', forecastData);
+                this.setState({
 
+                    loading: false,
+                    forecasts: forecastData
+
+                });
+          
             }.bind(this))
 
             .catch(function (err) {
@@ -62,7 +63,7 @@ var ForecastContainer = React.createClass({
         return (
             <Forecast
                 selectedCity={ this.state.selectedCity }
-                Loading={this.state.loading} 
+                Loading={this.state.loading}
                 Forecast={this.state.forecasts}/>
         )
     }

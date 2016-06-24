@@ -52,7 +52,7 @@ var GetCityContainer = React.createClass({
 
         this.setState({ city: '' });
 
-        this.context.router.push( '/forecast/' + this.state.city );
+        this.context.router.push( '/forecast/' + city );
 
 
         // getWeather(city)
